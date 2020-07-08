@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>detail page</title>
+{% endblock title %}
+
+{% block header %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Detail Page!</h1>
+            <p class="lead">your task detail.</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block contents %}
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            <p>タイトル：{{ object.title }}</p>
+            <p>内容：{{ object.memo }}</p>
+            <p>締め切り：{{ object.duedate }}</p>
+        </div>
+    </div>
+{% endblock contents %}
